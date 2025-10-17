@@ -24,7 +24,7 @@ public class Main {
             true
             );
         productsArray[2] = new Product(
-            "Apple MacBook Pro 16\"", 
+            "Apple MacBook Pro 16", 
             LocalDate.of(2024, 11, 10),
             "Apple Inc.", 
             "USA", 
