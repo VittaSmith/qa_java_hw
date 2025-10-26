@@ -15,7 +15,7 @@ public class Main {
                 case 2: System.out.println("Enter numbers (a and b): "); checkSumSign(sc.nextInt(), sc.nextInt()); break;
                 case 3: System.out.println("Enter value: "); printColor(sc.nextInt()); break;
                 case 4: System.out.println("Enter numbers (a and b): "); compareNumbers(sc.nextInt(), sc.nextInt()); break;
-                case 5: System.out.println(checkIntWithin(sc)); break;
+                case 5: System.out.println("Enter two integers (a and b):"); System.out.println(checkIntWithin(sc.nextInt(), sc.nextInt())); break;
                 case 6: System.out.print("Enter an integer: "); checkPositiv(sc.nextInt()); break;
                 case 7: System.out.print("Enter an integer: "); System.out.println(checkPositivBool(sc.nextInt())); break;
                 case 8: System.out.println("Enter a string and count: ");  stringInteger(sc.nextLine(), sc.nextInt()); break;
@@ -28,7 +28,6 @@ public class Main {
                 case 0: System.out.println("Exiting program. Goodbye!"); sc.close(); return;
                 default: System.out.println("No such task.");
             }
-            
         }
     }
 
@@ -47,7 +46,7 @@ public class Main {
     то вывести в консоль сообщение “Сумма положительная”, в противном случае - “Сумма отрицательная”;*/
 
     public static void checkSumSign(int a, int b){
-        String result = (a+b>0)? "Сумма положительная" : "Сумма отрицательная";
+        String result = ( a + b >= 0) ? "Сумма положительная" : "Сумма отрицательная";
         System.out.println(result);
     }
 
@@ -57,8 +56,8 @@ public class Main {
 
     public static void printColor(int value){
         String nameColore = "";
-        if (value < 0) nameColore="Красный";
-        else if (value >= 0 && value<=100) nameColore="Желтый";
+        if (value <= 0) nameColore="Красный";
+        else if (value <= 100) nameColore="Желтый";
         else nameColore="Зеленый";
         System.out.println(nameColore);
     }
@@ -67,29 +66,22 @@ public class Main {
     которыми захотите. Если a больше или равно b, то необходимо вывести в консоль сообщение “a >= b”, в противном случае “a < b”;*/
 
     public static void compareNumbers(int a, int b){
-        String test = a>=b? "a >= b":"a < b";
+        String test = a >= b? "a >= b":"a < b";
         System.out.println(test);
     }
 
     /*5. Напишите метод, принимающий на вход два целых числа и проверяющий, что их сумма лежит в пределах от 10 до 20 (включительно), 
     если да – вернуть true, в противном случае – false.*/
 
-    public static boolean checkIntWithin(Scanner sc){
-        System.out.println("Enter two integers (a and b):");
-        int a = Math.abs(sc.nextInt()), b = Math.abs(sc.nextInt());
-        if ((a>=10 && a<=20)&&(b>=10 && b<=20)){
-            return true;
-        } else {
-            return false;
-        }
-
+    public static boolean checkIntWithin(int a, int b){
+        return (a + b >=10) && (a + b <=20);
     } 
 
     /*6. Напишите метод, которому в качестве параметра передается целое число, 
     метод должен напечатать в консоль, положительное ли число передали или отрицательное. Замечание: ноль считаем положительным числом.*/
 
     public static void checkPositiv(int n){
-        if (n>=0) System.out.println("Positive");
+        if (n >= 0) System.out.println("Positive");
         else System.out.println("Negative");
     }
 
@@ -98,8 +90,7 @@ public class Main {
     Замечание: ноль считаем положительным числом.*/
 
     public static boolean checkPositivBool(int n){
-        if (n>=0) return false;
-        else return true;
+        return (n<0);
     }
 
     /*8. Напишите метод, которому в качестве аргументов передается строка и число, 
@@ -127,9 +118,8 @@ public class Main {
         for (int mas : arr){
             if (mas==1) mas=0;
             else mas = 1;
-            System.out.print(mas + " ");
         }
-        System.out.println();
+        System.out.println(Arrays.toString(arr));
     }
 
     //11. Задать пустой целочисленный массив длиной 100. С помощью цикла заполнить его значениями 1 2 3 4 5 6 7 8 ... 100;
@@ -146,11 +136,10 @@ public class Main {
 
     public static void arraySixToDouble(){
         int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-        for(int mas : arr){
-            if (mas<6) mas*=2;
-            System.out.print(mas + " ");
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < 6) arr[i] *= 2;
         }
-        System.out.println();
+        System.out.println(Arrays.toString(arr));
     }
 
     /*13. Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое), 
