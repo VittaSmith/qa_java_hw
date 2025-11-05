@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-11-05T10:59:11 MSK" name="Surefire suite" finished-at="2025-11-05T10:59:51 MSK" duration-ms="40090">
+    <groups>
+    </groups>
+    <test started-at="2025-11-05T10:59:11 MSK" name="Surefire test" finished-at="2025-11-05T10:59:51 MSK" duration-ms="40090">
+      <class name="tests.MtsOnlineTopUpTests">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:10 MSK" name="setupSuite" finished-at="2025-11-05T10:59:11 MSK" duration-ms="177" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:11 MSK" name="setup" finished-at="2025-11-05T10:59:13 MSK" duration-ms="2157" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="checkAllServiceTypesPlaceholders()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:13 MSK" name="checkAllServiceTypesPlaceholders" description="Поиск различных услуг" finished-at="2025-11-05T10:59:21 MSK" duration-ms="8671" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAllServiceTypesPlaceholders -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:21 MSK" name="tearDown" finished-at="2025-11-05T10:59:22 MSK" duration-ms="105" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkAllServiceTypesPlaceholders status=SUCCESS method=MtsOnlineTopUpTests.checkAllServiceTypesPlaceholders()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:22 MSK" name="setup" finished-at="2025-11-05T10:59:22 MSK" duration-ms="895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="fillAndContinue()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:22 MSK" name="fillAndContinue" description="Проверка варианта «Услуги связи»: заполнение полей, нажатие «Продолжить», окно оплаты" finished-at="2025-11-05T10:59:32 MSK" duration-ms="9940" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillAndContinue -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:32 MSK" name="tearDown" finished-at="2025-11-05T10:59:33 MSK" duration-ms="99" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=fillAndContinue status=SUCCESS method=MtsOnlineTopUpTests.fillAndContinue()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:33 MSK" name="setup" finished-at="2025-11-05T10:59:33 MSK" duration-ms="545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="moreDetailsWorks()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:33 MSK" name="moreDetailsWorks" description="Проверка перехода по ссылке «Подробнее о сервисе»" finished-at="2025-11-05T10:59:39 MSK" duration-ms="5760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- moreDetailsWorks -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:39 MSK" name="tearDown" finished-at="2025-11-05T10:59:39 MSK" duration-ms="102" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=moreDetailsWorks status=SUCCESS method=MtsOnlineTopUpTests.moreDetailsWorks()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:39 MSK" name="setup" finished-at="2025-11-05T10:59:40 MSK" duration-ms="692" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="paymentLogosVisible()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:40 MSK" name="paymentLogosVisible" description="Проверка наличия логотипов платёжных систем" finished-at="2025-11-05T10:59:44 MSK" duration-ms="4697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paymentLogosVisible -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:44 MSK" name="tearDown" finished-at="2025-11-05T10:59:44 MSK" duration-ms="88" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paymentLogosVisible status=SUCCESS method=MtsOnlineTopUpTests.paymentLogosVisible()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:44 MSK" name="setup" finished-at="2025-11-05T10:59:45 MSK" duration-ms="535" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="titleIsCorrect()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:45 MSK" name="titleIsCorrect" description="Проверка названия блока «Онлайн пополнение без комиссии»" finished-at="2025-11-05T10:59:51 MSK" duration-ms="5630" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- titleIsCorrect -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912]" started-at="2025-11-05T10:59:51 MSK" name="tearDown" finished-at="2025-11-05T10:59:51 MSK" duration-ms="93" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=titleIsCorrect status=SUCCESS method=MtsOnlineTopUpTests.titleIsCorrect()[pri:0, instance:tests.MtsOnlineTopUpTests@25fb8912] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.MtsOnlineTopUpTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","15189","Поиск различных услуг","Surefire suite","Wed Nov 05 10:36:46 MSK 2025","passed","Wed Nov 05 10:37:01 MSK 2025","tests.MtsOnlineTopUpTests","Surefire test","tests.MtsOnlineTopUpTests","checkAllServiceTypesPlaceholders"
+"","5167","Проверка перехода по ссылке «Подробнее о сервисе»","Surefire suite","Wed Nov 05 10:37:11 MSK 2025","passed","Wed Nov 05 10:37:17 MSK 2025","tests.MtsOnlineTopUpTests","Surefire test","tests.MtsOnlineTopUpTests","moreDetailsWorks"
+"","8311","Проверка варианта «Услуги связи»: заполнение полей, нажатие «Продолжить», окно оплаты","Surefire suite","Wed Nov 05 10:37:02 MSK 2025","passed","Wed Nov 05 10:37:11 MSK 2025","tests.MtsOnlineTopUpTests","Surefire test","tests.MtsOnlineTopUpTests","fillAndContinue"
+"","5647","Проверка наличия логотипов платёжных систем","Surefire suite","Wed Nov 05 10:37:17 MSK 2025","passed","Wed Nov 05 10:37:23 MSK 2025","tests.MtsOnlineTopUpTests","Surefire test","tests.MtsOnlineTopUpTests","paymentLogosVisible"
+"","4632","Проверка названия блока «Онлайн пополнение без комиссии»","Surefire suite","Wed Nov 05 10:37:24 MSK 2025","passed","Wed Nov 05 10:37:28 MSK 2025","tests.MtsOnlineTopUpTests","Surefire test","tests.MtsOnlineTopUpTests","titleIsCorrect"
