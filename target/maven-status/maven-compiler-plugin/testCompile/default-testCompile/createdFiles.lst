@@ -1,2 +1,6 @@
+pages/OnlineTopUpBlock.class
 pages/PaymentModal.class
 pages/OnlineTopUpBlock$PaymentTab.class
+tests/MtsOnlineTopUpTests.class
+base/BaseTest.class
+pages/CookieBanner.class

@@ -1,7 +1,7 @@
 package pages;
 
 import org.openqa.selenium.*;
-import org.openqa.selenium.NoSuchElementException;
+import io.qameta.allure.Step;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.Keys;
@@ -68,7 +68,7 @@ public class OnlineTopUpBlock {
         }
     }
 
-    // Проверить название указанного блока;
+    @Step("Получить заголовок блока")
     public String getTitle() {
         String title = scope().findElement(By.xpath(".//h2")).getText()
                 .replace('\u00A0', ' ')//пробел
@@ -78,14 +78,7 @@ public class OnlineTopUpBlock {
         return title.toLowerCase();
     }
 
-    /*
-    Проверить наличие логотипов платёжных систем;
-            //img[contains(@alt,'Visa')]
-            //img[contains(@alt,'Verified By Visa')]
-            //img[contains(@alt,'MasterCard')]
-            //img[contains(@alt,'MasterCard Secure Code')]
-            //img[contains(@alt,'Белкарт')]
-    */
+    @Step("Проверить наличие логотипов платёжных систем")
     public boolean hasKnownPaymentLogos() {
         String[] keywords = {"Visa", "Verified By Visa", "MasterCard", "MasterCard Secure Code", "Белкарт", "MIR", "МИР", "Apple Pay", "Google Pay"};
         boolean foundAny = false;
@@ -105,7 +98,7 @@ public class OnlineTopUpBlock {
         return foundAny;
     }
 
-    // Проверить работу ссылки «Подробнее о сервисе»;
+    @Step("Клик по ссылке «Подробнее о сервисе»")
     public void clickMoreDetails() {
         Set<String> before = driver.getWindowHandles();
         WebElement link = scope().findElement(By.xpath(
@@ -122,7 +115,7 @@ public class OnlineTopUpBlock {
         wait.until(d -> !d.getCurrentUrl().isEmpty());
     }
 
-    //переключение услуг
+    @Step("Переключение услуг: {tab}")
     public void openTab(PaymentTab tab) {
         By tabBy = By.xpath(".//button[contains(.,'" + tab.title + "')]"
                 + " | .//a[contains(.,'" + tab.title + "')]"
@@ -134,7 +127,7 @@ public class OnlineTopUpBlock {
         closeAnyOpenSelect();
     }
 
-    // выпадающий список услуг
+    @Step("Выбрать тип услуги: {typeName}")
     public void selectServiceType(String typeName) {
         WebElement dropdown = scope().findElement(By.xpath(".//div[contains(@class,'select__wrapper')]"));
         WebElement header = dropdown.findElement(By.xpath(".//button[contains(@class,'select__header')]"));
@@ -154,7 +147,7 @@ public class OnlineTopUpBlock {
         wait.until(ExpectedConditions.invisibilityOfElementLocated(listVisible));
     }
 
-    // получение плейсхолдеров для всех видимых input
+    @Step("Получение плейсхолдеров")
     public Map<String, String> getVisiblePlaceholders() {
         WebElement block = scope();
         Map<String, String> result = new LinkedHashMap<>();
@@ -175,6 +168,7 @@ public class OnlineTopUpBlock {
         return result;
     }
 
+    @Step("Ввести номер телефона: {phone}")
     public void setPhone(String phone) {
         WebElement phoneInput = scope().findElement(By.xpath(
                 ".//input[@class='phone' and @id='connection-phone']"
@@ -190,6 +184,7 @@ public class OnlineTopUpBlock {
         phoneInput.sendKeys(phone);
     }
 
+    @Step("Ввести сумму: {amount}")
     public void setAmount(String amount) {
         WebElement amountInput = scope().findElement(By.xpath(
                 ".//input[@class='total_rub' and @id='connection-sum']"
@@ -203,7 +198,8 @@ public class OnlineTopUpBlock {
         amountInput.sendKeys(Keys.DELETE);
         amountInput.sendKeys(amount);
     }
-    //Заполнить поля и проверить работу кнопки «Продолжить» (проверяем только вариант «Услуги связи», номер 297777777)
+
+    @Step("Нажать «Продолжить»")
     public void clickContinue() {
         WebElement btn = scope().findElement(By.xpath(".//button[contains(., 'Продолжить')]"));
         scrollIntoView(btn);

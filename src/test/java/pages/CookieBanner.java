@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import io.qameta.allure.Step;
 
 import java.time.Duration;
 
@@ -25,6 +26,7 @@ public class CookieBanner {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(8));
     }
 
+    @Step("Cookie-баннер показан?")
     public boolean isShown() {
         try {
             return driver.findElement(banner).isDisplayed();
@@ -33,6 +35,7 @@ public class CookieBanner {
         }
     }
 
+    @Step("Закрыть cookie-баннер (Отклонить)")
     public void decline() {
         if (!isShown()) return;
         System.out.println("Закрываем cookie-баннер");

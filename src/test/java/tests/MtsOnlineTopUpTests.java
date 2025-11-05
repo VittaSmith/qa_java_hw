@@ -10,6 +10,7 @@ import org.testng.annotations.Test;
 import pages.CookieBanner;
 import pages.OnlineTopUpBlock;
 import pages.PaymentModal;
+import io.qameta.allure.*;
 
 import java.time.Duration;
 import java.util.Map;
@@ -17,9 +18,14 @@ import java.util.Set;
 
 import static org.testng.Assert.*;
 
+@Epic("MTS BY")
+@Feature("Онлайн пополнение без комиссии")
 public class MtsOnlineTopUpTests extends BaseTest {
     private final String BASE_URL = "https://www.mts.by/";
 
+    @Story("UI: titleIsCorrect")
+    @Owner("Виктория")
+    @Severity(SeverityLevel.NORMAL)
     @Test(description = "Проверка названия блока «Онлайн пополнение без комиссии»")
     public void titleIsCorrect() {
         driver.get(BASE_URL);
@@ -31,6 +37,9 @@ public class MtsOnlineTopUpTests extends BaseTest {
                 "Заголовок блока некорректный: " + title);
     }
 
+    @Story("UI: paymentLogosVisible")
+    @Owner("Виктория")
+    @Severity(SeverityLevel.NORMAL)
     @Test(description = "Проверка наличия логотипов платёжных систем")
     public void paymentLogosVisible() {
         driver.get(BASE_URL);
@@ -40,6 +49,9 @@ public class MtsOnlineTopUpTests extends BaseTest {
         assertTrue(block.hasKnownPaymentLogos(), "Логотипы платёжных систем не найдены");
     }
 
+    @Story("UI: moreDetailsWorks")
+    @Owner("Виктория")
+    @Severity(SeverityLevel.NORMAL)
     @Test(description = "Проверка перехода по ссылке «Подробнее о сервисе»")
     public void moreDetailsWorks() {
         driver.get(BASE_URL);
@@ -53,6 +65,9 @@ public class MtsOnlineTopUpTests extends BaseTest {
         assertNotEquals(after, before, "URL не изменился после клика по ссылке «Подробнее о сервисе»");
     }
 
+    @Story("UI: checkAllServiceTypesPlaceholders")
+    @Owner("Виктория")
+    @Severity(SeverityLevel.NORMAL)
     @Test(description = "Поиск различных услуг")
     public void checkAllServiceTypesPlaceholders() {
         driver.get("https://www.mts.by/");
@@ -70,6 +85,9 @@ public class MtsOnlineTopUpTests extends BaseTest {
         }
     }
 
+    @Story("UI: fillAndContinue")
+    @Owner("Виктория")
+    @Severity(SeverityLevel.NORMAL)
     @Test(description = "Проверка варианта «Услуги связи»: заполнение полей, нажатие «Продолжить», окно оплаты")
     public void fillAndContinue() {
         driver.get("https://www.mts.by/");

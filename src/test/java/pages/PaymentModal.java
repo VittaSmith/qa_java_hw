@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import io.qameta.allure.Step;
 
 import java.time.Duration;
 import java.util.LinkedHashMap;
@@ -32,7 +33,7 @@ public class PaymentModal {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(root));
     }
 
-    // ищем отображаемый номер
+    @Step("Получить отображаемый телефон")
     public String getDisplayedPhone() {
         By by = By.xpath(".//div[contains(@class,'pay-description__text')]//span");
         return java.util.Optional.ofNullable(scope().findElement(by).getText())
@@ -41,7 +42,7 @@ public class PaymentModal {
                 .trim();
     }
 
-    // ищем куда ввести номер
+    @Step("Получить отображаемую сумму")
     public String getDisplayedAmount() {
         By by = By.xpath(".//div[contains(@class,'pay-description__cost')]//span");
         return java.util.Optional.ofNullable(scope().findElement(by).getText())
@@ -50,7 +51,7 @@ public class PaymentModal {
                 .trim();
     }
 
-    // собираем плейсхолдеры полей карты
+    @Step("Собрать плейсхолдеры полей карты")
     public Map<String, String> getCardPlaceholders() {
         Map<String, String> res = new LinkedHashMap<>();
         By[] locators = new By[] {
@@ -72,13 +73,13 @@ public class PaymentModal {
         return res;
     }
 
-    // кнопка оплаты
+    @Step("Получить текст кнопки оплаты")
     public String getContinueButtonText() {
         By by = By.xpath(".//button[.//span[contains(text(),'Оплатить')]]");
         return scope().findElement(by).getText().replace('\u00A0',' ').trim();
     }
 
-    //платежные иконки
+    @Step("Есть ли иконки платёжных систем в модальном окне")
     public boolean hasPaymentIcons() {
         By iconsContainer = By.xpath(".//div[contains(@class,'icons-container')]");
         try {
